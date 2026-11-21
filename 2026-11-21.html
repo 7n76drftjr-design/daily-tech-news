@@ -1,97 +1,117 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="2026年11月21日のAI・ITニュースを日本語でわかりやすく紹介">
-<title>Daily Tech News | 2026年11月21日</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2026年11月21日版。AI・ITニュース7本をエンジニア向けに詳しく解説。">
+<title>2026.11.21 | Daily Tech News</title>
 <style>
-:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#687386;--accent:#3457d5;--line:#e7ebf3}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}
-header{background:#111a32;color:white;padding:34px 20px}
-.wrap{max-width:900px;margin:auto}
-h1{font-size:clamp(27px,5vw,40px);margin:0}
-header p{color:#c9d2e7;margin:7px 0 0}
-nav{margin-top:16px;font-size:14px}
-nav a{color:#dce5ff}
-main{padding:22px 16px 54px}
-.intro{background:#eaf0ff;border-radius:14px;padding:16px 18px;margin:8px 0 28px;color:#293b70}
-section{margin:28px 0 38px}
-h2{font-size:23px;border-left:5px solid var(--accent);padding-left:12px}
-.items{display:grid;gap:14px}
-.item{background:var(--card);padding:18px 20px;border-radius:14px;box-shadow:0 3px 14px #18264a0b}
-.item h3{font-size:18px;line-height:1.45;margin:6px 0}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.item p{color:#465166;margin:8px 0 0}
-.meta,.note,footer{color:var(--muted);font-size:13px}
-.tag{display:inline-block;background:#eef1f8;color:#526078;border-radius:99px;padding:2px 9px;font-size:12px;margin-top:8px}
-.back{display:inline-block;margin-top:20px}
-footer{text-align:center;padding:24px}
-</style>
-</head>
+:root{color-scheme:dark;--bg:#090e1b;--panel:#111a2d;--panel2:#17233b;--line:#263653;--text:#edf2ff;--muted:#9aa9c5;--blue:#86a5ff;--mint:#69dbc4}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#17264a 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.8 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:920px;margin:auto;padding:0 20px}
+header{padding:30px 0 26px;border-bottom:1px solid var(--line)}.brand{font-size:13px;letter-spacing:.14em;font-weight:800;color:#dce6ff}.toplink{display:inline-block;margin-top:12px;font-size:13px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:25px 0 8px;letter-spacing:-.03em}.sub,.meta,.muted{color:var(--muted)}.sub{margin:0}
+main{padding:28px 0 60px}.lead{padding:18px 20px;background:linear-gradient(120deg,#18294a,#13243a);border:1px solid #2a416a;border-radius:16px;margin-bottom:32px}
+h2{font-size:23px;margin:36px 0 16px}h2:before{content:"";display:inline-block;width:5px;height:21px;background:var(--blue);border-radius:4px;margin-right:11px;vertical-align:-3px}
+.article{background:linear-gradient(145deg,#131e33,#0f1829);border:1px solid var(--line);border-radius:16px;padding:20px;margin:14px 0}
+.meta{font-size:12px;letter-spacing:.03em}.kind{display:inline-block;border-radius:99px;padding:2px 9px;background:#1c3155;color:#b7caff;font-size:11px;margin-left:7px}
+h3{font-size:19px;line-height:1.45;margin:7px 0 8px}.article p{margin:8px 0;color:#c4cee1}
+details{margin-top:15px;border-top:1px solid var(--line);padding-top:12px}summary{cursor:pointer;color:#a9c0ff;font-weight:650}summary::marker{color:var(--mint)}
+.detail{padding:10px 2px 2px}.detail h4{font-size:14px;color:#dce6ff;margin:15px 0 4px}.detail p,.detail li{color:#c0cce0}.detail ul{padding-left:21px;margin:5px 0}
+.takeaway{background:#0d2630;border-left:3px solid var(--mint);padding:11px 14px;border-radius:7px;margin-top:13px;color:#c9f5eb}
+footer{border-top:1px solid var(--line);padding:25px 0 38px;color:var(--muted);font-size:12px}
+@media(max-width:600px){.wrap{padding:0 15px}.article{padding:16px}h3{font-size:17px}}
+</style></head>
 <body>
-<header><div class="wrap">
-<h1>Daily Tech News</h1>
-<p>AIとITの動きを、毎日わかりやすく。</p>
-<p>今日のニュース：2026年11月21日（土）</p>
-<nav><a href="index.html">トップページへ戻る</a></nav>
-</div></header>
+<header><div class="wrap"><div class="brand">DAILY TECH NEWS <span style="color:#7184aa">/ ARCHIVE</span></div><a class="toplink" href="../index.html">← トップページへ戻る</a><h1>2026年11月21日</h1><p class="sub">AI 3本・IT 4本｜ニュースの背景とエンジニア視点のポイント</p></div></header>
 <main class="wrap">
-<div class="intro"><strong>今日のピックアップ</strong><br>
-AI分野では、AIエージェントが大量のツールを効率よく扱うための仕組みや、ブラウザ内で動く小型AIモデルが登場。IT分野では、Webアプリの脆弱性対策、データ品質監視、Kubernetesのネットワーク機能などに注目。</div>
+<div class="lead"><strong>今日のポイント</strong><br>AIエージェントが多くのツールを扱う際の効率化、ブラウザ内で動く小型AI、そしてKubernetesの通信基盤やRubyの重大な脆弱性など、開発現場にも関係する話題をまとめた。</div>
 
-<section><h2>AIニュース</h2><div class="items">
-<article class="item">
-<div class="meta">Google　2026/11/19</div>
-<h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/" target="_blank" rel="noopener">Gemini APIに「Tool Retrieval」が登場</a></h3>
-<p>AIエージェントが多数のツールを使う際、すべてのツール仕様を毎回読み込むのではなく、必要になったツールの詳細だけを後から取得できる機能。入力トークンや応答の遅延を抑え、大量のツールを扱うエージェントを効率化する。</p>
-<span class="tag">開発者向け / Gemini API</span>
-</article>
-<article class="item">
-<div class="meta">Microsoft　2026/11/19</div>
-<h3><a href="https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/" target="_blank" rel="noopener">Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</a></h3>
-<p>Edgeに組み込まれる小型言語モデルがAion Instructに更新された。約23億パラメータで、要約・文章生成・指示への応答などを端末側で処理する。クラウドに毎回問い合わせずに済むため、Webサイト上でのAI機能の実装にもつながる。</p>
-<span class="tag">ブラウザ / オンデバイスAI</span>
-</article>
-<article class="item">
-<div class="meta">Google　2026/11/19</div>
-<h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener">生成AIモデル「Genie 4」がGemini APIから利用可能に</a></h3>
-<p>テキストや参考画像から、操作できる仮想空間を生成するGenie 4がGemini APIとGoogle AI Studioで利用可能になった。開発者はゲームやシミュレーション、ロボット学習などに向けた実験を進められる。</p>
-<span class="tag">生成AI / 開発者向け</span>
-</article>
-</div></section>
+<h2>AIニュース</h2>
+<article class="article" id="gemini-tool-retrieval">
+<div class="meta">GOOGLE · 2026/11/19 <span class="kind">AI / API</span></div>
+<h3>Gemini APIに「Tool Retrieval」が登場</h3>
+<p>AIエージェントが大量の外部ツールを使うとき、必要なツールの詳細な定義だけを後から読み込める仕組み。入力トークンと応答時間を抑え、ツール数が増えても扱いやすくする。</p>
+<a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/" target="_blank" rel="noopener">Google公式発表を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>何が変わる？</h4><p>従来のFunction Callingでは、利用可能な各ツールについて、名前・説明だけでなく引数のJSON Schemaなどもリクエストに含めるのが一般的。ツールが数十〜数百に増えると、実際には使わないツールの定義まで毎回プロンプトに載り、入力トークンや処理時間を消費する。</p>
+<h4>Tool Retrievalの仕組み</h4><p>ツール名と説明はモデルに見せつつ、詳細なパラメータ定義は「必要になったときに取得する」設定にできる。モデルがツールを使う必要があると判断すると、tool_searchを通じて該当ツールの詳細を取得し、そのまま関数呼び出しに進む。Googleの説明ではInteractions APIのプレビュー機能で、defer_loadingを使って対象ツールを遅延読み込みする。</p>
+<h4>身近な例</h4><p>社内AIに「顧客検索」「請求書発行」「返金」「配送状況確認」など100種類のAPIを接続しているケースを想像すると分かりやすい。配送状況を調べるだけなら、返金APIや請求書発行APIの詳細な引数定義まで毎回読み込む必要はない。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> MCPやFunction Callingを使ったエージェントで、ツールの数が増えたときのコンテキスト設計・コスト・レイテンシ改善に関係する。ツールを小さく分割し、説明文を適切に設計する重要性も残る。</div>
+</div></details></article>
 
-<section><h2>ITニュース</h2><div class="items">
-<article class="item">
-<div class="meta">Cloudflare　2026/11/20</div>
-<h3><a href="https://blog.cloudflare.com/ruby2shell-waf-protection/" target="_blank" rel="noopener">Rubyの脆弱性「ruby2shell」へのWAF対策を公開</a></h3>
-<p>Rubyのメモリ破壊につながる脆弱性（CVE-2026-132825）について、CloudflareがWAFで攻撃をブロックする仕組みを説明。RailsやSinatraを利用している場合は、WAFだけに頼らずRubyのバージョン確認とアップデートが重要。</p>
-<span class="tag">セキュリティ / Ruby</span>
-</article>
-<article class="item">
-<div class="meta">AWS　2026/11/20</div>
-<h3><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/glue-catalog-data-quality-monitoring/" target="_blank" rel="noopener">AWS Glue Data Catalogでデータ品質をまとめて監視可能に</a></h3>
-<p>カタログやデータベース単位で品質チェックを一度設定すれば、対象テーブルをまとめて定期評価できるようになった。後から追加したテーブルも対象にできるため、データ基盤での品質チェック運用を簡素化できる。</p>
-<span class="tag">クラウド / データ基盤</span>
-</article>
-<article class="item">
-<div class="meta">Google Cloud　2026/11/20</div>
-<h3><a href="https://cloud.google.com/blog/products/networking/ambient-networking-for-gke-sidecarless-service-mesh" target="_blank" rel="noopener">GKEでサイドカー不要の「Ambient Networking」が一般提供</a></h3>
-<p>Kubernetesのサービスメッシュ機能を、各アプリケーションPodのサイドカーではなくノード側の共有コンポーネントで提供する方式。Podごとのプロキシ管理やリソース消費を抑え、通信の保護・監視・ルーティングを行いやすくする。</p>
-<span class="tag">Kubernetes / ネットワーク</span>
-</article>
-<article class="item">
-<div class="meta">Google Workspace　2026/11/20</div>
-<h3><a href="https://workspaceupdates.googleblog.com/2026/11/expanded-google-vault-support-for-external-spaces-and-group-conversations-in-Google-Chat.html" target="_blank" rel="noopener">Google Vaultが外部スペースやグループチャットの保存に対応へ</a></h3>
-<p>Google Chatの外部スペースやグループDMについて、参加組織ごとにメッセージを保持・検索・エクスポートできるようになる。企業の監査やコンプライアンス対応を強化する機能で、展開開始は2027年2月中旬の予定。</p>
-<span class="tag">業務ツール / セキュリティ・監査</span>
-</article>
-</div></section>
-<p class="note">※「今日のニュース」は11月21日時点で確認できた直近の公式発表を中心に掲載。記事の公開日は各ニュースの見出し上に記載しています。</p>
-<a class="back" href="index.html">← トップページへ戻る</a>
+<article class="article" id="edge-aion">
+<div class="meta">MICROSOFT · 2026/11/19 <span class="kind">AI / BROWSER</span></div>
+<h3>Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</h3>
+<p>Edgeの組み込み小型言語モデルがAion Instructに更新。ブラウザ上で要約や文章生成などを端末内で処理する「オンデバイスAI」の選択肢が広がる。</p>
+<a href="https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/" target="_blank" rel="noopener">Microsoft公式発表を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>オンデバイスAIとは？</h4><p>AIの推論処理をクラウド上のサーバーではなく、ユーザーのPCなど端末側で実行する方式。ネットワーク往復が不要になるため、対応する処理では応答を速くでき、入力データを外部サーバーへ送らずに済む場合がある。一方、端末のメモリ・CPU・GPU性能に制約される。</p>
+<h4>Aion InstructとPrompt API</h4><p>Microsoftの発表ではAion Instructは23億パラメータの小型モデル。Edgeの組み込みモデルとして、文章の要約・生成・指示追従・構造化出力などを想定する。Prompt APIを使うとWebサイト側のJavaScriptからブラウザ内モデルを呼び出す方向性が開ける。今回のPrompt APIはOrigin Trialとして案内されており、一般的なWeb標準として全ブラウザで使える機能と混同しないことが大切。</p>
+<h4>クラウドAIとの使い分け</h4><p>短い要約や分類など軽い処理は端末内モデル、複雑な推論や大きなコンテキストが必要な処理はクラウドモデル、といったハイブリッド構成が考えられる。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> WebアプリにAI機能を追加するとき、APIキーを使ったサーバー経由のAI呼び出しだけでなく、ブラウザ内推論という選択肢も検討できる。ただし対応ブラウザ・端末性能・モデル利用可否のフォールバック設計が必要。</div>
+</div></details></article>
+
+<article class="article" id="genie4">
+<div class="meta">GOOGLE · 2026/11/19 <span class="kind">AI / GENERATIVE</span></div>
+<h3>生成AIモデル「Genie 4」がGemini APIから利用可能に</h3>
+<p>テキストや参考画像から、操作できる仮想世界を生成するGenie 4をGemini APIとGoogle AI Studioから試せるようになった。</p>
+<a href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener">Google公式発表を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>通常の画像生成と何が違う？</h4><p>一般的な画像生成は、基本的に一枚の静止画を出力する。Genie 4は、テキストや画像を起点に、ユーザーが操作できる連続した仮想環境を生成する「ワールドモデル」。Googleの発表では720p・24fpsの世界を生成し、キーボード操作や追加のテキスト指示で環境を変化させられる。</p>
+<h4>どんな用途が考えられる？</h4><ul><li>ゲームやインタラクティブコンテンツの試作</li><li>空間デザインやシーン構成の可視化</li><li>ロボットやAIエージェントのシミュレーション環境</li></ul>
+<h4>API提供の意味</h4><p>APIから利用できることで、完成済みのデモを触るだけでなく、自分のアプリケーションや実験用ワークフローに組み込む道ができる。生成される世界の一貫性や操作への応答、計算コストなどは用途ごとに評価が必要。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> AIが文章・画像を生成する段階から、操作可能な環境そのものを生成する方向への広がり。シミュレーションやテスト環境の作り方にも影響する可能性がある。</div>
+</div></details></article>
+
+<h2>ITニュース</h2>
+<article class="article" id="ruby2shell">
+<div class="meta">CLOUDFLARE · 2026/11/20 <span class="kind">SECURITY / RUBY</span></div>
+<h3>Rubyの脆弱性「ruby2shell」へのWAF対策を公開</h3>
+<p>Rubyの文字列処理に関するヒープバッファオーバーフロー。条件によってはリモートコード実行につながる可能性があり、修正版への更新が重要。</p>
+<a href="https://blog.cloudflare.com/ruby2shell-waf-protection/" target="_blank" rel="noopener">Cloudflare公式解説を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>何が問題なの？</h4><p>Cloudflareの解説によると、ruby2shell（CVE-2026-132825）はRubyが文字列の大文字・小文字変換を行う際の処理にあるヒープバッファオーバーフロー。確保したメモリ領域に対して想定より多く書き込むと、隣接するメモリを壊す可能性がある。攻撃条件が成立した場合、プログラムの異常終了だけでなくコード実行につながるおそれがある。</p>
+<h4>なぜWebアプリが影響を受ける？</h4><p>RailsやSinatraなどRubyを使うWebアプリでは、リクエスト処理の過程で問題のある文字列処理に到達する可能性がある。アプリ側で特別な機能を実装していなくても、フレームワークや依存ライブラリの標準的な処理経路から呼び出される場合があるため、影響調査が必要。</p>
+<h4>どう対処する？</h4><ul><li>利用中のRubyバージョンと実行環境を確認する</li><li>Rubyチームが案内する修正版へアップデートする（Cloudflare記事では3.3.14、3.4.13、4.0.10を記載）</li><li>WAFルールはパッチ適用までの緩和策として利用し、恒久対策の代わりにしない</li><li>コンテナイメージやビルド済みランタイムも更新対象に含める</li></ul>
+<div class="takeaway"><strong>エンジニア視点：</strong> Javaなど別言語の案件でも、依存ランタイムの脆弱性対応の進め方は共通。アプリのソースコードだけでなく、ベースイメージ・実行環境・フレームワークのバージョンまで棚卸しする。</div>
+</div></details></article>
+
+<article class="article" id="aws-glue">
+<div class="meta">AWS · 2026/11/20 <span class="kind">CLOUD / DATA</span></div>
+<h3>AWS Glue Data Catalogでデータ品質をまとめて監視可能に</h3>
+<p>カタログやデータベース単位で品質チェックを定義し、対象テーブルをまとめて継続評価できるようになった。後から追加されたテーブルも対象にできる。</p>
+<a href="https://aws.amazon.com/about-aws/whats-new/2026/11/glue-catalog-data-quality-monitoring/" target="_blank" rel="noopener">AWS公式発表を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>そもそもデータ品質とは？</h4><p>データ基盤では、値がNULLではないか、IDが重複していないか、日付が想定範囲内か、件数が急に減っていないか、といった観点でデータの正しさを確認する。品質が悪いデータが後続の集計や分析に流れると、レポートや意思決定まで誤る。</p>
+<h4>今回の変更点</h4><p>これまではテーブルごとに品質評価の設定・実行を管理する場面があった。今回の機能では、カタログ・データベース・テーブルの範囲で一度ルールを設定し、範囲内のテーブルをまとめて評価できる。新しく追加されたテーブルも対象に含められ、スケジュール実行やメタデータ変更時の実行を設定できる。</p>
+<h4>ルールの例</h4><ul><li>顧客IDがNULLでないこと</li><li>注文IDが一意であること</li><li>売上金額が0以上であること</li><li>レコード件数が通常の範囲から大きく外れていないこと</li></ul><p>組み込みのプロファイリングに加え、DQDL（Data Quality Definition Language）で独自ルールを定義できる。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> テーブル数が増えるデータ基盤で、品質チェックの設定漏れを減らす仕組み。アプリ開発でいう入力バリデーションを、データパイプライン全体に適用するイメージに近い。</div>
+</div></details></article>
+
+<article class="article" id="gke-ambient">
+<div class="meta">GOOGLE CLOUD · 2026/11/20 <span class="kind">KUBERNETES / NETWORK</span></div>
+<h3>GKEでサイドカー不要の「Ambient Networking」が一般提供</h3>
+<p>サービスメッシュの通信機能を各Podのサイドカーに持たせず、ノード単位の共有プロキシなどで提供する方式。運用負荷やリソース消費の削減を狙う。</p>
+<a href="https://cloud.google.com/blog/products/networking/ambient-networking-for-gke-sidecarless-service-mesh" target="_blank" rel="noopener">Google Cloud公式解説を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>サイドカー方式とは？</h4><p>サービスメッシュでは、アプリケーション間の通信に認証・暗号化・ルーティング・メトリクス収集などを追加する。従来のサイドカー方式では、アプリケーションPodごとにEnvoyなどのプロキシコンテナを配置し、アプリの通信をそこへ通す。機能は強力だが、PodごとにCPU・メモリを使い、プロキシの更新や再起動管理も必要になる。</p>
+<h4>Ambient Networkingの構成</h4><p>Google Cloudの説明では、通信処理の一部をノード単位の共有Envoyプロキシへ移す。アプリPodにプロキシを注入する代わりに、ノード側で通信を捕捉し、共有プロキシでmTLS、認可、ロードバランシング、メトリクス収集などを行う。制御プレーンはルーティングやポリシーなどの設定を配布する。</p>
+<h4>何がうれしい？</h4><ul><li>アプリPodごとにサイドカーを持たなくてよい</li><li>プロキシ更新のためのPod再起動を減らせる</li><li>ノード単位で通信を観測・制御しやすくなる</li></ul><p>ただし、すべての通信機能が同じ方式で処理されるわけではなく、L4とL7の機能や利用条件を確認して設計する必要がある。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> KubernetesのPod・Node・Namespaceの役割に加え、アプリ通信がどこで捕捉され、どのプロキシを通り、どこで暗号化・認可されるかを理解する題材になる。</div>
+</div></details></article>
+
+<article class="article" id="google-vault">
+<div class="meta">GOOGLE WORKSPACE · 2026/11/20 <span class="kind">IT / COMPLIANCE</span></div>
+<h3>Google Vaultが外部スペースやグループチャットの保存に対応へ</h3>
+<p>Google Chatの外部スペースやグループDMについて、参加組織ごとにメッセージを保持・検索・エクスポートできるようになる。2027年2月中旬から展開予定。</p>
+<a href="https://workspaceupdates.googleblog.com/2026/11/expanded-google-vault-support-for-external-spaces-and-group-conversations-in-Google-Chat.html" target="_blank" rel="noopener">Google公式発表を読む ↗</a>
+<details><summary>詳しい解説を読む</summary><div class="detail">
+<h4>Google Vaultとは？</h4><p>Google Workspace向けの情報ガバナンス・電子情報開示（eDiscovery）サービス。組織のルールに基づいてデータを保持し、監査や法的対応のために検索・エクスポートできる。</p>
+<h4>今回の変更点</h4><p>これまでは外部スペースやグループDMの会話について、作成した組織だけがVaultでメッセージを保持できるケースがあった。今回の変更では、会話に自組織のユーザーが参加していれば、その組織も自組織分のコピーを保持・検索・エクスポートできるようになる。</p>
+<h4>保持される範囲の注意点</h4><p>組織の最初のユーザーが会話に参加した時点から、その組織のコピーが記録される。最後のユーザーが退出するまでの新しいメッセージ・編集・削除が対象となる。参加前の編集・削除履歴は含まれず、履歴オフの会話は対象外。ユーザーがChat画面で見える内容と、Vaultで組織が保持するコピーの範囲は必ずしも同じではない。</p>
+<div class="takeaway"><strong>エンジニア視点：</strong> SaaS連携や外部組織とのチャットを設計・運用する際、画面上の削除や編集と、監査用の保存データは別の仕組みで管理されることを理解しておくとよい。</div>
+</div></details></article>
+<p class="muted" style="font-size:12px;margin-top:28px">※各社の公式発表をもとに要約・解説。機能の提供範囲やプレビュー状況は変更される場合があります。実際の導入時はリンク先の最新ドキュメントを確認してください。</p>
 </main>
-<footer>Daily Tech News · Sources: 各社公式ブログ・発表</footer>
-</body>
-</html>
+<footer><div class="wrap">DAILY TECH NEWS · AI & IT · <a href="../index.html">トップへ戻る</a></div></footer>
+</body></html>
