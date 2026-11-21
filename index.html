@@ -5,7 +5,7 @@
 <meta name="description" content="AIとITの最新ニュースをエンジニア向けにわかりやすく解説するDaily Tech News">
 <title>Daily Tech News | AI & IT</title>
 <style>
-:root{color-scheme:dark;--bg:#090e1b;--panel:#111a2d;--panel2:#17233b;--line:#263653;--text:#edf2ff;--muted:#9aa9c5;--blue:#86a5ff;--mint:#69dbc4}
+:root{color-scheme:dark;--bg:#090e1b;--panel:#111a2d;--line:#263653;--text:#edf2ff;--muted:#9aa9c5;--blue:#86a5ff;--mint:#69dbc4}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#17264a 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1050px;margin:auto;padding:0 22px}
 header{padding:30px 0 48px;border-bottom:1px solid var(--line)}.brand{font-size:13px;letter-spacing:.15em;font-weight:800;color:#dce6ff}
@@ -31,71 +31,25 @@ footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);f
 <div class="stats"><div class="stat"><small>AI NEWS · 2026.11.21</small><strong>03 <span style="font-size:13px;color:#9aa9c5">記事</span></strong></div><div class="stat"><small>IT NEWS · 2026.11.21</small><strong>04 <span style="font-size:13px;color:#9aa9c5">記事</span></strong></div></div>
 </div></div></header>
 <main class="wrap">
-<div class="toolbar">
-<input class="search" id="search" type="search" placeholder="ニュースを検索（例：Kubernetes、Ruby、AIエージェント）" aria-label="ニュースを検索">
-<div class="filters" role="group" aria-label="カテゴリで絞り込み">
-<button class="filter active" data-filter="all">すべて</button><button class="filter" data-filter="AI">AIニュース</button><button class="filter" data-filter="IT">ITニュース</button>
-</div>
-</div>
+<div class="toolbar"><input class="search" id="search" type="search" placeholder="ニュースを検索（例：Kubernetes、Ruby、AIエージェント）" aria-label="ニュースを検索">
+<div class="filters" role="group" aria-label="カテゴリで絞り込み"><button class="filter active" data-filter="all">すべて</button><button class="filter" data-filter="AI">AIニュース</button><button class="filter" data-filter="IT">ITニュース</button></div></div>
 <div class="section-head" id="latest"><h2>最新ニュース</h2><span id="count">7件を表示</span></div>
 <div class="grid" id="articles">
-<article class="card" data-category="AI" data-search="Gemini API Tool Retrieval ツール検索 遅延読み込み トークン Function Calling エージェント">
-<div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>Gemini APIに「Tool Retrieval」が登場</h3><p>AIエージェントが必要なツール定義だけを取得。大量のツールを扱う際のトークン消費と遅延を抑える。</p><a class="read" href="2026-11-21.html#gemini-tool-retrieval">詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="AI" data-search="Microsoft Edge Aion Instruct Prompt API オンデバイス 小型モデル ブラウザ">
-<div class="meta"><span class="category">AI NEWS</span> · MICROSOFT · 2026/11/19</div><h3>Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</h3><p>ブラウザ内で要約や文章生成を行うオンデバイスAI。Webアプリからモデルを利用する新しい選択肢。</p><a class="read" href="2026-11-21.html#edge-aion">詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="AI" data-search="Google Genie 4 Gemini API 生成AI ワールドモデル 仮想世界 シミュレーション">
-<div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>生成AIモデル「Genie 4」がGemini APIから利用可能に</h3><p>テキストや画像から、操作可能な仮想世界を生成するワールドモデル。</p><a class="read" href="2026-11-21.html#genie4">詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="IT" data-search="Ruby ruby2shell CVE-2026-132825 Cloudflare WAF 脆弱性 ヒープバッファオーバーフロー">
-<div class="meta"><span class="category">IT NEWS</span> · CLOUDFLARE · 2026/11/20</div><h3>Rubyの脆弱性「ruby2shell」へのWAF対策を公開</h3><p>文字列処理に関するヒープバッファオーバーフロー。Rubyの修正版への更新が重要。</p><a class="read" href="2026-11-21.html#ruby2shell">詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="IT" data-search="AWS Glue Data Catalog Data Quality DQDL データ品質 テーブル データ基盤">
-<div class="meta"><span class="category">IT NEWS</span> · AWS · 2026/11/20</div><h3>AWS Glue Data Catalogでデータ品質をまとめて監視可能に</h3><p>カタログ・データベース単位で品質ルールを設定し、複数テーブルを継続評価。</p><a class="read" href="2026-11-21.html#aws-glue">詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="IT" data-search="Google Cloud GKE Kubernetes Ambient Networking サイドカー Envoy サービスメッシュ mTLS">
-<div class="meta"><span class="category">IT NEWS</span> · GOOGLE CLOUD · 2026/11/20</div><h3>GKEでサイドカー不要の「Ambient Networking」が一般提供</h3><p>ノード単位の共有プロキシを利用し、サービスメッシュの運用負荷を軽減。</p><a class="read" href="2026-11-21.html# gke-ambient".replace("# ","#")>詳しい解説を読む →</a>
-</article>
-<article class="card" data-category="IT" data-search="Google Vault Google Chat 外部スペース グループDM 保持 監査 コンプライアンス">
-<div class="meta"><span class="category">IT NEWS</span> · GOOGLE WORKSPACE · 2026/11/20</div><h3>Google Vaultが外部スペースやグループチャットの保存に対応へ</h3><p>外部組織とのチャットも、参加組織ごとに保持・検索・エクスポート可能に。</p><a class="read" href="2026-11-21.html#google-vault">詳しい解説を読む →</a>
-</article>
+<article class="card" data-category="AI" data-search="Gemini API Tool Retrieval ツール検索 遅延読み込み トークン Function Calling エージェント"><div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>Gemini APIに「Tool Retrieval」が登場</h3><p>AIエージェントが必要なツール定義だけを取得。大量のツールを扱う際のトークン消費と遅延を抑える。</p><a class="read" href="2026-11-21.html#gemini-tool-retrieval">詳しい解説を読む →</a></article>
+<article class="card" data-category="AI" data-search="Microsoft Edge Aion Instruct Prompt API オンデバイス 小型モデル ブラウザ"><div class="meta"><span class="category">AI NEWS</span> · MICROSOFT · 2026/11/19</div><h3>Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</h3><p>ブラウザ内で要約や文章生成を行うオンデバイスAI。Webアプリからモデルを利用する新しい選択肢。</p><a class="read" href="2026-11-21.html#edge-aion">詳しい解説を読む →</a></article>
+<article class="card" data-category="AI" data-search="Google Genie 4 Gemini API 生成AI ワールドモデル 仮想世界 シミュレーション"><div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>生成AIモデル「Genie 4」がGemini APIから利用可能に</h3><p>テキストや画像から、操作可能な仮想世界を生成するワールドモデル。</p><a class="read" href="2026-11-21.html#genie4">詳しい解説を読む →</a></article>
+<article class="card" data-category="IT" data-search="Ruby ruby2shell CVE-2026-132825 Cloudflare WAF 脆弱性 ヒープバッファオーバーフロー"><div class="meta"><span class="category">IT NEWS</span> · CLOUDFLARE · 2026/11/20</div><h3>Rubyの脆弱性「ruby2shell」へのWAF対策を公開</h3><p>文字列処理に関するヒープバッファオーバーフロー。Rubyの修正版への更新が重要。</p><a class="read" href="2026-11-21.html#ruby2shell">詳しい解説を読む →</a></article>
+<article class="card" data-category="IT" data-search="AWS Glue Data Catalog Data Quality DQDL データ品質 テーブル データ基盤"><div class="meta"><span class="category">IT NEWS</span> · AWS · 2026/11/20</div><h3>AWS Glue Data Catalogでデータ品質をまとめて監視可能に</h3><p>カタログ・データベース単位で品質ルールを設定し、複数テーブルを継続評価。</p><a class="read" href="2026-11-21.html#aws-glue">詳しい解説を読む →</a></article>
+<article class="card" data-category="IT" data-search="Google Cloud GKE Kubernetes Ambient Networking サイドカー Envoy サービスメッシュ mTLS"><div class="meta"><span class="category">IT NEWS</span> · GOOGLE CLOUD · 2026/11/20</div><h3>GKEでサイドカー不要の「Ambient Networking」が一般提供</h3><p>ノード単位の共有プロキシを利用し、サービスメッシュの運用負荷を軽減。</p><a class="read" href="2026-11-21.html#gke-ambient">詳しい解説を読む →</a></article>
+<article class="card" data-category="IT" data-search="Google Vault Google Chat 外部スペース グループDM 保持 監査 コンプライアンス"><div class="meta"><span class="category">IT NEWS</span> · GOOGLE WORKSPACE · 2026/11/20</div><h3>Google Vaultが外部スペースやグループチャットの保存に対応へ</h3><p>外部組織とのチャットも、参加組織ごとに保持・検索・エクスポート可能に。</p><a class="read" href="2026-11-21.html#google-vault">詳しい解説を読む →</a></article>
 </div>
 <div class="empty" id="empty">一致するニュースがありません。別のキーワードで検索してください。</div>
-
 <div class="section-head" id="archive"><h2>日付別アーカイブ</h2><span>公開済みの特集ページ</span></div>
 <div class="archive"><a class="archive-link" href="2026-11-21.html"><strong>2026年11月21日（土）</strong><small>AI 3本 · IT 4本 · 詳細解説付き →</small></a></div>
 <p style="font-size:12px;color:var(--muted);margin-top:12px">過去のニュース一覧は<a href="archive/legacy-news-list-2026-11-21.html">こちら</a>から確認できます。日付別アーカイブは、特集ページを追加するたびに増えていきます。</p>
 </main>
 <footer><div class="wrap">DAILY TECH NEWS · AI & IT · <a href="archive/legacy-news-list-2026-11-21.html">以前のニュース一覧</a></div></footer>
 <script>
-(()=>{
-const search=document.getElementById('search');
-const buttons=[...document.querySelectorAll('.filter')];
-const cards=[...document.querySelectorAll('.card')];
-const count=document.getElementById('count');
-const empty=document.getElementById('empty');
-let category='all';
-function apply(){
- const q=search.value.trim().toLocaleLowerCase();
- let visible=0;
- cards.forEach(card=>{
-  const categoryMatch=category==='all'||card.dataset.category===category;
-  const text=(card.innerText+' '+(card.dataset.search||'')).toLocaleLowerCase();
-  const searchMatch=!q||text.includes(q);
-  const show=categoryMatch&&searchMatch;
-  card.hidden=!show;
-  if(show)visible++;
- });
- count.textContent=visible+'件を表示';
- empty.style.display=visible?'none':'block';
-}
-buttons.forEach(button=>button.addEventListener('click',()=>{
- category=button.dataset.filter;
- buttons.forEach(b=>b.classList.toggle('active',b===button));
- apply();
-}));
-search.addEventListener('input',apply);
-})();
+(()=>{const search=document.getElementById('search');const buttons=[...document.querySelectorAll('.filter')];const cards=[...document.querySelectorAll('.card')];const count=document.getElementById('count');const empty=document.getElementById('empty');let category='all';function apply(){const q=search.value.trim().toLocaleLowerCase();let visible=0;cards.forEach(card=>{const categoryMatch=category==='all'||card.dataset.category===category;const text=(card.innerText+' '+(card.dataset.search||'')).toLocaleLowerCase();const show=categoryMatch&&(!q||text.includes(q));card.hidden=!show;if(show)visible++});count.textContent=visible+'件を表示';empty.style.display=visible?'none':'block'}buttons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;buttons.forEach(b=>b.classList.toggle('active',b===button));apply()}));search.addEventListener('input',apply)})();
 </script>
 </body></html>
