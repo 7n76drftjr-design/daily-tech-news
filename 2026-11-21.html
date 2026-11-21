@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2026年11月21日のAI・ITニュースを日本語でわかりやすく紹介">
+<title>Daily Tech News | 2026年11月21日</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#687386;--accent:#3457d5;--line:#e7ebf3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7}
+header{background:#111a32;color:white;padding:34px 20px}
+.wrap{max-width:900px;margin:auto}
+h1{font-size:clamp(27px,5vw,40px);margin:0}
+header p{color:#c9d2e7;margin:7px 0 0}
+nav{margin-top:16px;font-size:14px}
+nav a{color:#dce5ff}
+main{padding:22px 16px 54px}
+.intro{background:#eaf0ff;border-radius:14px;padding:16px 18px;margin:8px 0 28px;color:#293b70}
+section{margin:28px 0 38px}
+h2{font-size:23px;border-left:5px solid var(--accent);padding-left:12px}
+.items{display:grid;gap:14px}
+.item{background:var(--card);padding:18px 20px;border-radius:14px;box-shadow:0 3px 14px #18264a0b}
+.item h3{font-size:18px;line-height:1.45;margin:6px 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.item p{color:#465166;margin:8px 0 0}
+.meta,.note,footer{color:var(--muted);font-size:13px}
+.tag{display:inline-block;background:#eef1f8;color:#526078;border-radius:99px;padding:2px 9px;font-size:12px;margin-top:8px}
+.back{display:inline-block;margin-top:20px}
+footer{text-align:center;padding:24px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Daily Tech News</h1>
+<p>AIとITの動きを、毎日わかりやすく。</p>
+<p>今日のニュース：2026年11月21日（土）</p>
+<nav><a href="index.html">トップページへ戻る</a></nav>
+</div></header>
+<main class="wrap">
+<div class="intro"><strong>今日のピックアップ</strong><br>
+AI分野では、AIエージェントが大量のツールを効率よく扱うための仕組みや、ブラウザ内で動く小型AIモデルが登場。IT分野では、Webアプリの脆弱性対策、データ品質監視、Kubernetesのネットワーク機能などに注目。</div>
+
+<section><h2>AIニュース</h2><div class="items">
+<article class="item">
+<div class="meta">Google　2026/11/19</div>
+<h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/" target="_blank" rel="noopener">Gemini APIに「Tool Retrieval」が登場</a></h3>
+<p>AIエージェントが多数のツールを使う際、すべてのツール仕様を毎回読み込むのではなく、必要になったツールの詳細だけを後から取得できる機能。入力トークンや応答の遅延を抑え、大量のツールを扱うエージェントを効率化する。</p>
+<span class="tag">開発者向け / Gemini API</span>
+</article>
+<article class="item">
+<div class="meta">Microsoft　2026/11/19</div>
+<h3><a href="https://blogs.windows.com/msedgedev/2026/11/19/hybrid-intelligence-on-the-web-introducing-aion-instruct-and-prompt-api-in-microsoft-edge/" target="_blank" rel="noopener">Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</a></h3>
+<p>Edgeに組み込まれる小型言語モデルがAion Instructに更新された。約23億パラメータで、要約・文章生成・指示への応答などを端末側で処理する。クラウドに毎回問い合わせずに済むため、Webサイト上でのAI機能の実装にもつながる。</p>
+<span class="tag">ブラウザ / オンデバイスAI</span>
+</article>
+<article class="item">
+<div class="meta">Google　2026/11/19</div>
+<h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/" target="_blank" rel="noopener">生成AIモデル「Genie 4」がGemini APIから利用可能に</a></h3>
+<p>テキストや参考画像から、操作できる仮想空間を生成するGenie 4がGemini APIとGoogle AI Studioで利用可能になった。開発者はゲームやシミュレーション、ロボット学習などに向けた実験を進められる。</p>
+<span class="tag">生成AI / 開発者向け</span>
+</article>
+</div></section>
+
+<section><h2>ITニュース</h2><div class="items">
+<article class="item">
+<div class="meta">Cloudflare　2026/11/20</div>
+<h3><a href="https://blog.cloudflare.com/ruby2shell-waf-protection/" target="_blank" rel="noopener">Rubyの脆弱性「ruby2shell」へのWAF対策を公開</a></h3>
+<p>Rubyのメモリ破壊につながる脆弱性（CVE-2026-132825）について、CloudflareがWAFで攻撃をブロックする仕組みを説明。RailsやSinatraを利用している場合は、WAFだけに頼らずRubyのバージョン確認とアップデートが重要。</p>
+<span class="tag">セキュリティ / Ruby</span>
+</article>
+<article class="item">
+<div class="meta">AWS　2026/11/20</div>
+<h3><a href="https://aws.amazon.com/about-aws/whats-new/2026/11/glue-catalog-data-quality-monitoring/" target="_blank" rel="noopener">AWS Glue Data Catalogでデータ品質をまとめて監視可能に</a></h3>
+<p>カタログやデータベース単位で品質チェックを一度設定すれば、対象テーブルをまとめて定期評価できるようになった。後から追加したテーブルも対象にできるため、データ基盤での品質チェック運用を簡素化できる。</p>
+<span class="tag">クラウド / データ基盤</span>
+</article>
+<article class="item">
+<div class="meta">Google Cloud　2026/11/20</div>
+<h3><a href="https://cloud.google.com/blog/products/networking/ambient-networking-for-gke-sidecarless-service-mesh" target="_blank" rel="noopener">GKEでサイドカー不要の「Ambient Networking」が一般提供</a></h3>
+<p>Kubernetesのサービスメッシュ機能を、各アプリケーションPodのサイドカーではなくノード側の共有コンポーネントで提供する方式。Podごとのプロキシ管理やリソース消費を抑え、通信の保護・監視・ルーティングを行いやすくする。</p>
+<span class="tag">Kubernetes / ネットワーク</span>
+</article>
+<article class="item">
+<div class="meta">Google Workspace　2026/11/20</div>
+<h3><a href="https://workspaceupdates.googleblog.com/2026/11/expanded-google-vault-support-for-external-spaces-and-group-conversations-in-Google-Chat.html" target="_blank" rel="noopener">Google Vaultが外部スペースやグループチャットの保存に対応へ</a></h3>
+<p>Google Chatの外部スペースやグループDMについて、参加組織ごとにメッセージを保持・検索・エクスポートできるようになる。企業の監査やコンプライアンス対応を強化する機能で、展開開始は2027年2月中旬の予定。</p>
+<span class="tag">業務ツール / セキュリティ・監査</span>
+</article>
+</div></section>
+<p class="note">※「今日のニュース」は11月21日時点で確認できた直近の公式発表を中心に掲載。記事の公開日は各ニュースの見出し上に記載しています。</p>
+<a class="back" href="index.html">← トップページへ戻る</a>
+</main>
+<footer>Daily Tech News · Sources: 各社公式ブログ・発表</footer>
+</body>
+</html>
