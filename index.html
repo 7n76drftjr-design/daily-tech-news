@@ -1,55 +1,139 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="AIとITの最新ニュースをエンジニア向けにわかりやすく解説するDaily Tech News">
-<title>Daily Tech News | AI & IT</title>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AIとITの最新ニュースを毎日チェック">
+<title>Daily Tech News</title>
 <style>
-:root{color-scheme:dark;--bg:#090e1b;--panel:#111a2d;--line:#263653;--text:#edf2ff;--muted:#9aa9c5;--blue:#86a5ff;--mint:#69dbc4}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#17264a 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1050px;margin:auto;padding:0 22px}
-header{padding:30px 0 48px;border-bottom:1px solid var(--line)}.brand{font-size:13px;letter-spacing:.15em;font-weight:800;color:#dce6ff}
-nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:15px;font-size:13px}nav a{color:#b9c8e7}
-.hero{padding:44px 0 22px}.eyebrow{color:var(--mint);font-size:12px;letter-spacing:.16em;font-weight:700}
-h1{font-size:clamp(34px,6vw,58px);line-height:1.08;letter-spacing:-.04em;margin:12px 0}
-.hero p{color:var(--muted);max-width:640px;margin:0}
-.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px 0}
-.stat{background:linear-gradient(145deg,#172642,#111a2d);border:1px solid var(--line);border-radius:15px;padding:17px}.stat small{color:var(--muted);letter-spacing:.08em}.stat strong{display:block;font-size:29px;margin-top:2px}
-main{padding:12px 0 60px}.toolbar{background:#101a2c;border:1px solid var(--line);padding:17px;border-radius:16px;margin:14px 0 28px}
-.search{width:100%;border:1px solid #344563;background:#0a1221;color:var(--text);border-radius:10px;padding:13px 14px;font:inherit;outline:none}.search:focus{border-color:var(--blue)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.filter{border:1px solid #344563;background:#17233b;color:#bdc9df;border-radius:99px;padding:7px 14px;font:inherit;font-size:13px;cursor:pointer}.filter.active{background:#263d6b;border-color:#6e91ee;color:#fff}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:30px 0 14px}.section-head h2{font-size:22px;margin:0}.section-head span{font-size:12px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:linear-gradient(145deg,#131e33,#0f1829);border:1px solid var(--line);border-radius:15px;padding:18px;min-width:0}.meta{font-size:11px;color:var(--muted);letter-spacing:.04em}.category{color:var(--mint);font-weight:700}.card h3{font-size:17px;line-height:1.45;margin:9px 0}.card p{color:#bac7dc;font-size:13px;margin:0 0 13px}.read{font-size:13px;font-weight:650}
-.archive{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.archive-link{display:block;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px}.archive-link strong{display:block;font-size:16px}.archive-link small{color:var(--muted)}
-.empty{display:none;color:var(--muted);padding:22px;text-align:center;border:1px dashed #344563;border-radius:12px}
-footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:12px}
-@media(max-width:650px){.wrap{padding:0 15px}.grid,.archive{grid-template-columns:1fr}.hero{padding-top:34px}.section-head{align-items:start;flex-direction:column}}
-</style></head>
-<body>
-<header><div class="wrap"><div class="brand">DAILY TECH NEWS <span style="color:#7184aa">/ AI & IT</span></div><nav><a href="#latest">最新ニュース</a><a href="archive/index.html">日付別アーカイブ</a><a href="archive/legacy-news-list-2026-11-21.html">以前のニュース一覧</a></nav>
-<div class="hero"><div class="eyebrow">TECHNOLOGY, EVERY DAY.</div><h1>AIとITの動きを、<br>わかりやすく。</h1><p>毎日の技術ニュースを日本語で整理。概要だけでなく、仕組み・背景・エンジニアへの影響まで解説します。</p>
-<div class="stats"><div class="stat"><small>AI NEWS · 2026.11.21</small><strong>03 <span style="font-size:13px;color:#9aa9c5">記事</span></strong></div><div class="stat"><small>IT NEWS · 2026.11.21</small><strong>04 <span style="font-size:13px;color:#9aa9c5">記事</span></strong></div></div>
-</div></div></header>
-<main class="wrap">
-<div class="toolbar"><input class="search" id="search" type="search" placeholder="ニュースを検索（例：Kubernetes、Ruby、AIエージェント）" aria-label="ニュースを検索">
-<div class="filters" role="group" aria-label="カテゴリで絞り込み"><button class="filter active" data-filter="all">すべて</button><button class="filter" data-filter="AI">AIニュース</button><button class="filter" data-filter="IT">ITニュース</button></div></div>
-<div class="section-head" id="latest"><h2>最新ニュース</h2><span id="count">7件を表示</span></div>
-<div class="grid" id="articles">
-<article class="card" data-category="AI" data-search="Gemini API Tool Retrieval ツール検索 遅延読み込み トークン Function Calling エージェント"><div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>Gemini APIに「Tool Retrieval」が登場</h3><p>AIエージェントが必要なツール定義だけを取得。大量のツールを扱う際のトークン消費と遅延を抑える。</p><a class="read" href="2026-11-21.html#gemini-tool-retrieval">詳しい解説を読む →</a></article>
-<article class="card" data-category="AI" data-search="Microsoft Edge Aion Instruct Prompt API オンデバイス 小型モデル ブラウザ"><div class="meta"><span class="category">AI NEWS</span> · MICROSOFT · 2026/11/19</div><h3>Microsoft Edgeに小型AIモデル「Aion Instruct」を導入</h3><p>ブラウザ内で要約や文章生成を行うオンデバイスAI。Webアプリからモデルを利用する新しい選択肢。</p><a class="read" href="2026-11-21.html#edge-aion">詳しい解説を読む →</a></article>
-<article class="card" data-category="AI" data-search="Google Genie 4 Gemini API 生成AI ワールドモデル 仮想世界 シミュレーション"><div class="meta"><span class="category">AI NEWS</span> · GOOGLE · 2026/11/19</div><h3>生成AIモデル「Genie 4」がGemini APIから利用可能に</h3><p>テキストや画像から、操作可能な仮想世界を生成するワールドモデル。</p><a class="read" href="2026-11-21.html#genie4">詳しい解説を読む →</a></article>
-<article class="card" data-category="IT" data-search="Ruby ruby2shell CVE-2026-132825 Cloudflare WAF 脆弱性 ヒープバッファオーバーフロー"><div class="meta"><span class="category">IT NEWS</span> · CLOUDFLARE · 2026/11/20</div><h3>Rubyの脆弱性「ruby2shell」へのWAF対策を公開</h3><p>文字列処理に関するヒープバッファオーバーフロー。Rubyの修正版への更新が重要。</p><a class="read" href="2026-11-21.html#ruby2shell">詳しい解説を読む →</a></article>
-<article class="card" data-category="IT" data-search="AWS Glue Data Catalog Data Quality DQDL データ品質 テーブル データ基盤"><div class="meta"><span class="category">IT NEWS</span> · AWS · 2026/11/20</div><h3>AWS Glue Data Catalogでデータ品質をまとめて監視可能に</h3><p>カタログ・データベース単位で品質ルールを設定し、複数テーブルを継続評価。</p><a class="read" href="2026-11-21.html#aws-glue">詳しい解説を読む →</a></article>
-<article class="card" data-category="IT" data-search="Google Cloud GKE Kubernetes Ambient Networking サイドカー Envoy サービスメッシュ mTLS"><div class="meta"><span class="category">IT NEWS</span> · GOOGLE CLOUD · 2026/11/20</div><h3>GKEでサイドカー不要の「Ambient Networking」が一般提供</h3><p>ノード単位の共有プロキシを利用し、サービスメッシュの運用負荷を軽減。</p><a class="read" href="2026-11-21.html#gke-ambient">詳しい解説を読む →</a></article>
-<article class="card" data-category="IT" data-search="Google Vault Google Chat 外部スペース グループDM 保持 監査 コンプライアンス"><div class="meta"><span class="category">IT NEWS</span> · GOOGLE WORKSPACE · 2026/11/20</div><h3>Google Vaultが外部スペースやグループチャットの保存に対応へ</h3><p>外部組織とのチャットも、参加組織ごとに保持・検索・エクスポート可能に。</p><a class="read" href="2026-11-21.html#google-vault">詳しい解説を読む →</a></article>
-</div>
-<div class="empty" id="empty">一致するニュースがありません。別のキーワードで検索してください。</div>
-<div class="section-head" id="archive"><h2>日付別アーカイブ</h2><span>公開済みの特集ページ</span></div>
-<div class="archive"><a class="archive-link" href="archive/index.html"><strong>2026年11月21日（土）</strong><small>AI 3本 · IT 4本 · 詳細解説付き →</small></a></div>
-<p style="font-size:12px;color:var(--muted);margin-top:12px">日付から過去の記事を探すには<a href="archive/index.html">アーカイブ一覧</a>へ。以前のニュース一覧は<a href="archive/legacy-news-list-2026-11-21.html">こちら</a>。</p>
-</main>
-<footer><div class="wrap">DAILY TECH NEWS · AI & IT · <a href="archive/legacy-news-list-2026-11-21.html">以前のニュース一覧</a></div></footer>
-<script>
-(()=>{const search=document.getElementById('search');const buttons=[...document.querySelectorAll('.filter')];const cards=[...document.querySelectorAll('.card')];const count=document.getElementById('count');const empty=document.getElementById('empty');let category='all';function apply(){const q=search.value.trim().toLocaleLowerCase();let visible=0;cards.forEach(card=>{const categoryMatch=category==='all'||card.dataset.category===category;const text=(card.innerText+' '+(card.dataset.search||'')).toLocaleLowerCase();const show=categoryMatch&&(!q||text.includes(q));card.hidden=!show;if(show)visible++});count.textContent=visible+'件を表示';empty.style.display=visible?'none':'block'}buttons.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.filter;buttons.forEach(b=>b.classList.toggle('active',b===button));apply()}));search.addEventListener('input',apply)})();
-</script>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#687386;--accent:#3457d5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,""Segoe UI"",sans-serif;line-height:1.65}
+header{background:#111a32;color:white;padding:42px 20px}.wrap{max-width:900px;margin:auto}
+h1{font-size:clamp(28px,5vw,42px);margin:0}header p{color:#c9d2e7;margin:8px 0 0}
+main{padding:24px 16px 60px}section{margin:24px 0 36px}h2{font-size:23px;border-left:5px solid var(--accent);padding-left:12px}
+.items{display:grid;gap:14px}.item{background:var(--card);padding:18px 20px;border-radius:14px;box-shadow:0 3px 14px #18264a0b}
+.item h3{font-size:18px;line-height:1.45;margin:6px 0}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.item p{color:#465166;margin:8px 0 0}.meta,.empty,footer{color:var(--muted);font-size:13px}
+footer{text-align:center;padding:24px}
+</style></head><body>
+<header><div class="wrap"><h1>Daily Tech News</h1><p>AIとITの動きを、毎日わかりやすく。</p><p>更新日：2026年11月22日</p></div></header>
+<main class="wrap"><section><h2>AIニュース</h2><div class="items">
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/20</div>
+              <h3><a href="https://openai.com/index/combatting-adversarial-distillation" target="_blank" rel="noopener">Combatting adversarial distillation</a></h3>
+              <p>OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/20</div>
+              <h3><a href="https://openai.com/business/customer-stories/hebbia" target="_blank" rel="noopener">Hebbia sees improvements in financial research with GPT-6 Astra</a></h3>
+              <p>Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/20</div>
+              <h3><a href="https://openai.com/index/introducing-medchembench" target="_blank" rel="noopener">Can AI help scientists identify promising drug candidates?</a></h3>
+              <p>MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/19</div>
+              <h3><a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast" target="_blank" rel="noopener">How OpenAI’s Performance Factory keeps ChatGPT fast</a></h3>
+              <p>Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/19</div>
+              <h3><a href="https://openai.com/business/learn/codex-security-plugin-demo" target="_blank" rel="noopener">Explore the Codex Security Plugin</a></h3>
+              <p>Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/19</div>
+              <h3><a href="https://openai.com/business/learn/pr-scans-demo" target="_blank" rel="noopener">See PR scans in action</a></h3>
+              <p>Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/19</div>
+              <h3><a href="https://openai.com/business/learn/daybreak-blue-onboarding-demo" target="_blank" rel="noopener">Get started with Daybreak Blue</a></h3>
+              <p>Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/19</div>
+              <h3><a href="https://openai.com/business/learn/deploying-daybreak-red" target="_blank" rel="noopener">Deploying Daybreak Red</a></h3>
+              <p>Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/18</div>
+              <h3><a href="https://openai.com/index/the-silent-consensus" target="_blank" rel="noopener">The Silent Consensus</a></h3>
+              <p>Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/18</div>
+              <h3><a href="https://openai.com/business/customer-stories/sumitomo-life" target="_blank" rel="noopener">How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise</a></h3>
+              <p>Sumitomo Life uses ChatGPT Enterprise to research insurers, prepare proposals, and draft code for investment analysis. Early use by executives helped drive adoption.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/18</div>
+              <h3><a href="https://openai.com/index/research-acceleration-jagged-frontier" target="_blank" rel="noopener">Research acceleration: The jagged frontier</a></h3>
+              <p>OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.</p>
+            </article>
+            <article class="item">
+              <div class="meta">OpenAI　2026/11/18</div>
+              <h3><a href="https://openai.com/index/inside-the-codex-sandbox" target="_blank" rel="noopener">Inside the Codex sandbox</a></h3>
+              <p>See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.</p>
+            </article></div></section><section><h2>ITニュース</h2><div class="items">
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/20</div>
+              <h3><a href="https://blog.cloudflare.com/ruby2shell-waf-protection/" target="_blank" rel="noopener">How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)</a></h3>
+              <p>ruby2shell lets attackers corrupt memory in default Rails and Sinatra apps without logging in. Cloudflare WAF blocks it for every customer, including Free plans. Upgrade Ruby now, and use the WAF to cover the gap.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/20</div>
+              <h3><a href="https://blog.cloudflare.com/phpaftershell-waf-protection/" target="_blank" rel="noopener">How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws</a></h3>
+              <p>phpAfterShell is a critical flaw in PHP&#x27;s default session handler that can lead to code execution. Cloudflare WAF blocks it for all customers, including Free plans, and adds new rules for other PHP flaws fixed in the same release.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/20</div>
+              <h3><a href="https://blog.cloudflare.com/nginx2root/" target="_blank" rel="noopener">nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them</a></h3>
+              <p>Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server. Here’s how they work, and why origins behind Cloudflare&#x27;s proxy are shielded from the most serious of these bugs.</p>
+            </article>
+            <article class="item">
+              <div class="meta">GitHub　2026/11/19</div>
+              <h3><a href="https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/" target="_blank" rel="noopener">The best things in open source are built together</a></h3>
+              <p>Introducing Replica and the Open Source Accessibility Framework, new open source projects for collaboration and inclusion. The post The best things in open source are built together appeared first on The GitHub Blog .</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/19</div>
+              <h3><a href="https://blog.cloudflare.com/internet-traffic-2026-us-election/" target="_blank" rel="noopener">Internet traffic and attacks during the 2026 U.S. midterm elections</a></h3>
+              <p>On November 3, 2026 U.S. voters headed to the polls. Here’s what Cloudflare data across more than 1,400 protected sites tells us about Election Day Internet traffic and cyberattacks.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/18</div>
+              <h3><a href="https://blog.cloudflare.com/open-clairic/" target="_blank" rel="noopener">An updated Clairic and Clairic-flash are now open-weight, from the new Workers AI Superintelligence team</a></h3>
+              <p>Clairic graduates from preview, while Clairic-flash joins the repertoire on Workers AI. We’re doing an open-weight release for both extraction models.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/18</div>
+              <h3><a href="https://blog.cloudflare.com/java4shell-waf-protection/" target="_blank" rel="noopener">How Cloudflare WAF helps protect against Java4Shell (CVE-2026-114938)</a></h3>
+              <p>Java4Shell is a critical memory-corruption flaw in OpenJDK&#x27;s Base64 decoder that can lead to remote code execution. Cloudflare has released six WAF managed rules for paid plans that logs matching requests by default. Patch your Java runtimes now.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/17</div>
+              <h3><a href="https://blog.cloudflare.com/quad9-withdrawal-from-france/" target="_blank" rel="noopener">Quad9’s withdrawal from France: A canary in the coal mine</a></h3>
+              <p>Quad9&#x27;s forced withdrawal from France highlights the dangers of mandating DNS-level blocking. We explore why forcing public resolvers to act as content filters is technically flawed and threatens the open Internet.</p>
+            </article>
+            <article class="item">
+              <div class="meta">Microsoft　2026/11/17</div>
+              <h3><a href="https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/" target="_blank" rel="noopener">Ignite 2026: Building the frontier ecosystem</a></h3>
+              <p>Satya Nadella, Microsoft Chairman and CEO, delivered the opening keynote at Ignite in San Francisco this morning. Here is an edited version of his remarks. This week is about two things: First is how we capitalize on new capabilities that are growing exponenti</p>
+            </article>
+            <article class="item">
+              <div class="meta">GitHub　2026/11/17</div>
+              <h3><a href="https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/" target="_blank" rel="noopener">Maintainers don’t need more AI bug reports. They need fixes.</a></h3>
+              <p>In the Codename MDASH pilot, GitHub and Microsoft turned thousands of raw AI findings into 99 checked, private reports with suggested fixes for six widely used open source projects. Maintainers have already fixed more than half. The post Maintainers don’t need</p>
+            </article>
+            <article class="item">
+              <div class="meta">GitHub　2026/11/17</div>
+              <h3><a href="https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/" target="_blank" rel="noopener">Building the Agent Host Protocol for sessions that continue across devices</a></h3>
+              <p>Discover how we built the open Agent Host Protocol to keep your agent sessions accessible across editors, apps, phones, and the cloud. The post Building the Agent Host Protocol for sessions that continue across devices appeared first on The GitHub Blog .</p>
+            </article>
+            <article class="item">
+              <div class="meta">Cloudflare　2026/11/13</div>
+              <h3><a href="https://blog.cloudflare.com/kitesurf-open-source/" target="_blank" rel="noopener">Kitesurf is now open source</a></h3>
+              <p>Kitesurf, our experimental browser engine for AI agents, is now open source. Inspect the code, run it locally, or deploy your own instance on Cloudflare Workers.</p>
+            </article></div></section></main>
+<footer>Sources:各ニュース配信元 / 自動収集したRSSを掲載しています。</footer>
 </body></html>
